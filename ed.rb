@@ -37,7 +37,8 @@ class Ed < Formula
   test do
     testfile = (testpath/"test")
     testfile.write "Hello world"
-    pipe_output("#{bin}/ged -s #{testfile}", ",s/o//\nw\n")
+    ed = bin/(build.with?("default-names") ? "ed" : "ged")
+    pipe_output("#{ed} -s #{testfile}", ",s/o//\nw\n")
     assert_equal "Hell world", testfile.read.chomp
   end
 end
