@@ -11,6 +11,7 @@ class Diffutils < Formula
     sha256 "f2854483f252507a394909a5b195a0e7d5465e46ba3ff7716c8c48875f7c507d" => :el_capitan
     sha256 "49cf30eb22d24060e958f8a28d7d4321346026d09a49deca9ad018e995b5a428" => :yosemite
     sha256 "f7a85774a084e5b06f0c62d203dae04336973c79d4009245cd33025bf22aecbf" => :mavericks
+    sha256 "0895958ddcb543be1bde656a4c424defed9d2e62d07e59d4aec3060edf2facf1" => :x86_64_linux
   end
 
   def install
