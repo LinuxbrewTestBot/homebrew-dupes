@@ -12,6 +12,7 @@ class Rsync < Formula
     sha256 "b6162623af9da6a56b2f9ae13d63458f6d2e787be3b3ae60c61de2ffe2b1337c" => :el_capitan
     sha256 "d33c5a6b34683d3ec0d63403dd52c593d2f3ba50b16cbcfaac30b0b7b1774fcc" => :yosemite
     sha256 "38151a295b599821506ef117ea2be5190499001268138b144411bc69b19c57e0" => :mavericks
+    sha256 "c8d4ae6e2be0a65f2adf098e6df08d4a06a64cc63e883dc73cb9c6d1a482e626" => :x86_64_linux
   end
 
   depends_on "autoconf" => :build
