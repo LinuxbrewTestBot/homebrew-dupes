@@ -1,3 +1,4 @@
+# m4: Build a bottle for Linuxbrew
 class M4 < Formula
   desc "Macro processing language"
   homepage "https://www.gnu.org/software/m4"
