@@ -1,3 +1,4 @@
+# gzip: Build a bottle for Linuxbrew
 class Gzip < Formula
   desc "Popular GNU data compression program"
   homepage "https://www.gnu.org/software/gzip"
