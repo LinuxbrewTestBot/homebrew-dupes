@@ -1,3 +1,4 @@
+# gperf: Build a bottle for Linuxbrew
 class Gperf < Formula
   desc "Perfect hash function generator"
   homepage "https://www.gnu.org/software/gperf"
