@@ -1,3 +1,4 @@
+# xar: Build a bottle for Linuxbrew
 class Xar < Formula
   desc "eXtensible ARchiver"
   homepage "https://code.google.com/p/xar/"
