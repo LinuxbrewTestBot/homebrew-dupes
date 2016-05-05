@@ -10,6 +10,7 @@ class Srm < Formula
     sha256 "3965dac338dab92d3c25306ec55dda0b1b75b78fb1f9060cd2e1c7b1e842f7a5" => :el_capitan
     sha256 "bad23b6a0f2eebf37cc5b9f02f0001f5bf5af46fab55dd67aeb7b67796891b90" => :yosemite
     sha256 "800ceccc9adecec1ceabfbc6c3d2aaa1da682db174ab02ae75cbcbba4cee1270" => :mavericks
+    sha256 "15806e862b39e99b8f3e786011a313d392ac5419c91ca6d7dc0712158929ddf6" => :x86_64_linux
   end
 
   keg_only :provided_by_osx
