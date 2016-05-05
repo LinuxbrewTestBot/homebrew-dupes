@@ -11,6 +11,7 @@ class Gzip < Formula
     sha256 "f83c850ee014942640b63359e13e3e9da4d2db1d2728c54bd847078ba7817777" => :el_capitan
     sha256 "79c5b405d59ef30ada49058299483d8d5d83bfcb2d4d42f61cd89f805b1f4f2a" => :yosemite
     sha256 "55e0259951ced98bca53980b203b1bf63ae776720a85e4030484795367d3971d" => :mavericks
+    sha256 "10369c675132a821fc65bebd3bf4cc79b8a20b64bc954b9ba257b76627509e9e" => :x86_64_linux
   end
 
   def install
