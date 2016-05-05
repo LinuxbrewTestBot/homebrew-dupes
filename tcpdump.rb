@@ -13,7 +13,7 @@ class Tcpdump < Formula
     sha256 "67abede2a0c328caad072fdd7970580b3ba38e4a79b9eed61f2bd0e47c4b9ffb" => :mountain_lion
   end
 
-  depends_on "homebrew/dupes/libpcap" => :optional
+  depends_on "homebrew/dupes/libpcap" => [(:optional if OS.mac?)].compact
   depends_on "openssl"
 
   def install
