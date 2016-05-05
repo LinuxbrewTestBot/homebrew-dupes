@@ -10,6 +10,7 @@ class Xar < Formula
     sha256 "bbfa085a98db775ad409b2c269d243cbb72b174217548032e8574815409787d2" => :yosemite
     sha256 "c8365275e6eca371ae338b192ec5d281ebb95ba93c4a7d92ee34044951ac3c23" => :mavericks
     sha256 "1a78012dc77213f699d3dc4f061b9fe5add0c6a53699dcec69b31ce1cb72e7fa" => :mountain_lion
+    sha256 "9e6c511d7e394ec11d23827a742d49462c087281272b673cc24e2c67817bad79" => :x86_64_linux
   end
 
   keg_only :provided_by_osx
