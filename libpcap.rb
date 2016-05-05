@@ -11,6 +11,7 @@ class Libpcap < Formula
     sha256 "a4bcec4f3744f8d79246f8bf08f050c5ead1282bb84cbfee8781adda8be9d067" => :el_capitan
     sha256 "6d61bd2683252f7791b581e8ca0743663c70f5ccd7b6900b330b6ae51b09fe56" => :yosemite
     sha256 "01d4bcd4a4bebcd0cf5131a6bf49aba5efc19c7de5ffacda684f5655ea0126b4" => :mavericks
+    sha256 "7fa98ad89027a887bfa4d2a3b60a47fb5291ec63e44d2c579a21d914b75a9e9c" => :x86_64_linux
   end
 
   keg_only :provided_by_osx
