@@ -21,7 +21,10 @@ class Openssh < Formula
   depends_on "libressl" => :optional
   depends_on "ldns" => :optional
   depends_on "pkg-config" => :build if build.with? "ldns"
-  depends_on "libedit" => :build unless OS.mac?
+  unless OS.mac?
+    depends_on "homebrew/dupes/libedit"
+    depends_on "homebrew/dupes/krb5"
+  end
 
   if OS.mac?
     # Both these patches are applied by Apple.
@@ -47,11 +50,11 @@ class Openssh < Formula
 
     args = %W[
       --with-libedit
-      --with-pam
       --with-kerberos5
       --prefix=#{prefix}
       --sysconfdir=#{etc}/ssh
     ]
+    args << "--with-pam" if OS.mac?
 
     if build.with? "libressl"
       args << "--with-ssl-dir=#{Formula["libressl"].opt_prefix}"
