@@ -11,6 +11,7 @@ class Less < Formula
   end
 
   depends_on "pcre" => :optional
+  depends_on "homebrew/dupes/ncurses" unless OS.mac?
 
   def install
     args = ["--prefix=#{prefix}"]
