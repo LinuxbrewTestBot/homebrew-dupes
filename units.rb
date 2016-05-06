@@ -1,3 +1,4 @@
+# units: Build a bottle for Linuxbrew
 class Units < Formula
   desc "Utility to convert between different systems of units"
   homepage "https://www.gnu.org/software/units/"
