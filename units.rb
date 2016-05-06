@@ -10,6 +10,7 @@ class Units < Formula
     sha256 "895f1cd13ff45a9dd1756a44a4159b550480ddff895a13f9336b316752d0d7ac" => :el_capitan
     sha256 "643f93a9a83081a28932b8ffad744db0bdf61723ada1bb7686f9dee2af26aa41" => :yosemite
     sha256 "3897bdd0c6a5ca372f48d39b598df768385ac059c171f5e2df7f9a52bc056839" => :mavericks
+    sha256 "c61e0667182f12e7f232db7e0c8dc6e1e3bbb4e38ea8013aca6e6e6221ffa637" => :x86_64_linux
   end
 
   keg_only :provided_by_osx,
