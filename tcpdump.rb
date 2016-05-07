@@ -11,6 +11,7 @@ class Tcpdump < Formula
     sha256 "b969788e892accce35c0e9e3bde1ad03d315eb53e8240ea995a1af5813505807" => :yosemite
     sha256 "55add2e80c88e70fd6af0b043f7366f106d4cbff8b41eb34bbf9f6078aefcf95" => :mavericks
     sha256 "67abede2a0c328caad072fdd7970580b3ba38e4a79b9eed61f2bd0e47c4b9ffb" => :mountain_lion
+    sha256 "e607b5f39982171e8a1af4548b68401f6ff61547a312310a5cfd900b87dffde2" => :x86_64_linux
   end
 
   depends_on "homebrew/dupes/libpcap" => [(:optional if OS.mac?)].compact
