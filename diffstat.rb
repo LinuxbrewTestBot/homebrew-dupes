@@ -11,6 +11,7 @@ class Diffstat < Formula
     sha256 "458fbe3438d70f1cf4904e63b1563d6a4a3c0bfd83448e8ed8e142459854e36f" => :el_capitan
     sha256 "8f191c34cebece4e6576daa5eab661cd1eec78957e508c3b369a9eed7019c475" => :yosemite
     sha256 "06cae3bee231b56b08c850fc0b3721933296de4013bf5f8894e8395778bfa3f4" => :mavericks
+    sha256 "07087c6a7f1e2e83802a5aa4fdcb7e9ed5687dfaa3d404489d636708f6287cab" => :x86_64_linux
   end
 
   def install
