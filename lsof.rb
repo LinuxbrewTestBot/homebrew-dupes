@@ -12,6 +12,7 @@ class Lsof < Formula
     sha256 "166741406a0a1d6ac78b82274d56f1bb1d24c4d4cd2421919e48ce42566f90ca" => :el_capitan
     sha256 "b8292349936eea9e0f24daf01818cba06ce5e689b4e97f026a431034c509e67d" => :yosemite
     sha256 "92a1f687aa8a0df343b90771e16f6a11aa60968c034c9660318e38142533fb82" => :mavericks
+    sha256 "c8b71e4182d76d9d4715bdef0dbdbe1678c37b4f2597ff7d2f1472a4bfd2d2fa" => :x86_64_linux
   end
 
   def install
