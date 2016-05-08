@@ -26,7 +26,7 @@ class Lsof < Formula
                 "/usr/include", MacOS.sdk_path.to_s + "/usr/include"
 
       mv "00README", "../README"
-      system "./Configure", "-n", "darwin"
+      system "./Configure", "-n", OS::NAME
       system "make"
       bin.install "lsof"
     end
