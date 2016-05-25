@@ -70,7 +70,12 @@ class Ncurses < Formula
         ln_s "libncurses.dylib", "libcurses.dylib"
       else
         ln_s "libncurses.so", "libcurses.so"
+        ln_s "libncurses.so", "libtinfo.so"
       end
+    end
+
+    cd lib/"pkgconfig" do
+      ln_s "ncursesw.pc", "ncurses.pc"
     end
 
     cd bin do
