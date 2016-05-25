@@ -10,7 +10,7 @@ class Ncurses < Formula
     sha256 "3d608e7522a8855cb760ba8d8b3e7fa2e9896389844f6b89f67f652e710a08c6" => :el_capitan
     sha256 "c22a8d91d717757fe2e1c8a84c41151bd81e1651368681fe20a0283d8e5e745f" => :yosemite
     sha256 "87ebfc0fd5a86ac7a3a5d574f0cb513b5e8d856768b31609451d9e655ece8f19" => :mavericks
-    sha256 "799d254cf52c57af8e0e75e19b23ee85af185eb0e7a1c8f6a2017e92a41eb669" => :x86_64_linux
+    sha256 "65a4fb6eae29b3ca3dd9461aa93b76c505c96b203dc38c3d739725143922492e" => :x86_64_linux
   end
 
   keg_only :provided_by_osx
