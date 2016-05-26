@@ -55,6 +55,7 @@ class Openssh < Formula
       --sysconfdir=#{etc}/ssh
     ]
     args << "--with-pam" if OS.mac?
+    args << "--with-privsep-path=#{var}/lib/sshd" if OS.linux?
 
     if build.with? "libressl"
       args << "--with-ssl-dir=#{Formula["libressl"].opt_prefix}"
