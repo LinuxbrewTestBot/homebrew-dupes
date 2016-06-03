@@ -1,3 +1,4 @@
+# zlib: Build a bottle for Linuxbrew
 class Zlib < Formula
   desc "General-purpose lossless data-compression library"
   homepage "http://www.zlib.net/"
