@@ -1,3 +1,4 @@
+# ncurses: Build a bottle for Linuxbrew
 class Ncurses < Formula
   desc "Text-based UI library"
   homepage "https://www.gnu.org/s/ncurses/"
