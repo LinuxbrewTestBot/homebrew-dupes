@@ -11,6 +11,7 @@ class Less < Formula
     sha256 "78f87c61e209d93787232cf52e72d206d8e9393b2616e982645f02c46ad436dc" => :el_capitan
     sha256 "7f16df4d7504ce78543faafd814c5581d95ed56e2041bb63fa466cb452bcaebf" => :yosemite
     sha256 "94ce48c78105e4ed73d524806d4fe45b2fb1f4c84f25b0d129fa62d9128c93fe" => :mavericks
+    sha256 "010201928de86be3f99784124722361395fe69452a94de41a5ea329784d746a3" => :x86_64_linux
   end
 
   depends_on "pcre" => :optional
