@@ -7,9 +7,7 @@ class Nano < Formula
   sha256 "56f2ba1c532647bee36abd5f87a714400af0be084cf857a65bc8f41a0dc28fe5"
 
   bottle do
-    sha256 "afb10d9ad17e5d3689c11b28908f617296c70d5b0e8c511db38d555a0da73ef7" => :el_capitan
-    sha256 "a77b0b85d8f3589d3d788fdda5f4cf79a43e6a0e6ce157ad2acebaaf03c96538" => :yosemite
-    sha256 "ed0f52e81d8f7a6e56ea8ace29e08aac01b68b7b86ffbd5661ecf4eb804b08a3" => :mavericks
+    sha256 "c12444852823c315eb78d60b9f76d46b7c67dd40d93790acbe17639a5ae8bd51" => :x86_64_linux
   end
 
   head do
