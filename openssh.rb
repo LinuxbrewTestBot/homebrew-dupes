@@ -8,9 +8,7 @@ class Openssh < Formula
   sha256 "3ffb989a6dcaa69594c3b550d4855a5a2e1718ccdde7f5e36387b424220fbecc"
 
   bottle do
-    sha256 "5f4212b2a550da0aac2c8b9e80a964c721e2dd0cb250ee74974c4bb7ab5ee1c9" => :el_capitan
-    sha256 "a1f0baf4d1a263735b067aa33443afc42e347d3608d867015995ba4bd4824440" => :yosemite
-    sha256 "3323746bb60262ba38591fac908aa59f504d34a5cc7910023e16350e602010e8" => :mavericks
+    sha256 "743967fe21dddf6f7ba428272bcac210a07940a48b08728467b67bc53a7b2be0" => :x86_64_linux
   end
 
   # Please don't resubmit the keychain patch option. It will never be accepted.
