@@ -51,7 +51,7 @@ class Screen < Formula
                           "--mandir=#{man}",
                           "--infodir=#{info}",
                           "--enable-colors256"
-    system "make"
+    system "make", "CFLAGS=-include utmp.h"
     system "make", "install"
   end
 
