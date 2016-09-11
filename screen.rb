@@ -46,7 +46,7 @@ class Screen < Formula
     # before osdef.sh script generates it.
     ENV.deparallelize
 
-    ENV.append_to_cflags "-include utmp.h"
+    ENV.append_to_cflags "-include utmp.h" unless OS.mac?
 
     system "./autogen.sh"
     system "./configure", "--prefix=#{prefix}",
