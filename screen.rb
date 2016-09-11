@@ -46,12 +46,14 @@ class Screen < Formula
     # before osdef.sh script generates it.
     ENV.deparallelize
 
+    ENV.append "CFLAGS", "-include utmp.h"
+
     system "./autogen.sh"
     system "./configure", "--prefix=#{prefix}",
                           "--mandir=#{man}",
                           "--infodir=#{info}",
                           "--enable-colors256"
-    system "make", "CFLAGS=-include utmp.h"
+    system "make"
     system "make", "install"
   end
 
