@@ -10,6 +10,7 @@ class Nano < Formula
     sha256 "9a25cf9750ffdd409f3cc02acae52d7a71d494b2705fa2772f23ba56f01e9a0d" => :el_capitan
     sha256 "227834d524af6a0478fbb55edae188af52dd2276e632c33d1fe4890ca1eff93e" => :yosemite
     sha256 "8ce412434c4a9b011aba4526493768f9be4cb7d5e714dd50b0e22fd0eed3b88c" => :mavericks
+    sha256 "b2645d97d3079cf7d25a8d38194d777cd8ec438b2302b8282541238fe40178d7" => :x86_64_linux
   end
 
   head do
