@@ -20,9 +20,18 @@ class Libiconv < Formula
     sha256 "ad9b6da1a82fc4de27d6f7086a3382993a0b16153bc8e8a23d7b5f9334ca0a42"
   end
 
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/patches/9be2793af/libiconv/patch-utf8mac.diff"
-    sha256 "e8128732f22f63b5c656659786d2cf76f1450008f36bcf541285268c66cabeab"
+  if OS.mac?
+    patch do
+      url "https://raw.githubusercontent.com/Homebrew/patches/9be2793af/libiconv/patch-utf8mac.diff"
+      sha256 "e8128732f22f63b5c656659786d2cf76f1450008f36bcf541285268c66cabeab"
+    end
+  end
+
+  if OS.linux?
+    patch do
+      url "https://gist.githubusercontent.com/valkjsaaa/b715fd8c2596780ebd00eced2b2d63af/raw/dfdd0c2d3407505628d00319f1ade67f3e42679d/patch-oldglibc.patch"
+      sha256 "b58fcfdd96e93d6b34a53d97adb0b789031082fdde8bc56022b0537024e1f7c6"
+    end
   end
 
   patch :DATA
