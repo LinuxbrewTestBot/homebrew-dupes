@@ -9,6 +9,7 @@ class Libiconv < Formula
     sha256 "64d8a9383ba42ba3e41422bb8548ebc8f296f67fdda6e6d6a324f990b03c6db0" => :el_capitan
     sha256 "a0d9ff36269bc908fde4a039d2083152202055a2e053b6582ad2c9063c85ebc2" => :yosemite
     sha256 "456a816a94427c963fa3cb90257830aa33268f22443cf5a8a4cf1be3e3ed3bb9" => :mavericks
+    sha256 "7b49cfe45f49d4807fbc3cfcc1c456208f1d412ff2044ff095e21a74d2054435" => :x86_64_linux
   end
 
   keg_only :provided_by_osx
