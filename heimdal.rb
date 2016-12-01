@@ -20,6 +20,7 @@ class Heimdal < Formula
     args << "--without-x" if build.without? "x11"
 
     system "./configure", *args
+    ENV.deparallelize
     system "make", "install"
   end
 end
