@@ -6,6 +6,7 @@ class FileFormula < Formula
   mirror "https://fossies.org/linux/misc/file-5.29.tar.gz"
   sha256 "ea661277cd39bf8f063d3a83ee875432cc3680494169f952787e002bdd3884c0"
   head "https://github.com/file/file.git"
+  revision 1 if OS.linux?
 
   bottle do
     cellar :any
