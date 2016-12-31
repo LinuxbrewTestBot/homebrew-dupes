@@ -1,16 +1,15 @@
 class Openssh < Formula
   desc "OpenBSD freely-licensed SSH connectivity tools"
   homepage "http://www.openssh.com/"
-  url "http://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-7.3p1.tar.gz"
-  mirror "https://www.mirrorservice.org/pub/OpenBSD/OpenSSH/portable/openssh-7.3p1.tar.gz"
-  version "7.3p1"
-  sha256 "3ffb989a6dcaa69594c3b550d4855a5a2e1718ccdde7f5e36387b424220fbecc"
+  url "http://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-7.4p1.tar.gz"
+  mirror "https://www.mirrorservice.org/pub/OpenBSD/OpenSSH/portable/openssh-7.4p1.tar.gz"
+  version "7.4p1"
+  sha256 "1b1fc4a14e2024293181924ed24872e6f2e06293f3e8926a376b8aec481f19d1"
 
   bottle do
-    sha256 "5f4212b2a550da0aac2c8b9e80a964c721e2dd0cb250ee74974c4bb7ab5ee1c9" => :el_capitan
-    sha256 "a1f0baf4d1a263735b067aa33443afc42e347d3608d867015995ba4bd4824440" => :yosemite
-    sha256 "3323746bb60262ba38591fac908aa59f504d34a5cc7910023e16350e602010e8" => :mavericks
-    sha256 "743967fe21dddf6f7ba428272bcac210a07940a48b08728467b67bc53a7b2be0" => :x86_64_linux
+    sha256 "dc1399c974bd93b13c2a7814cc3ee94a26b58336ec96d47e33bfd6913446793c" => :sierra
+    sha256 "eab9307dc45d0f2438492e582eb5d6d5c47a959e8c2ddd9999b23a366bd25907" => :el_capitan
+    sha256 "901f3961cd36001559e988c43fc46d17fdd8d358cfc876a5bddae96120dfaed8" => :yosemite
   end
 
   # Please don't resubmit the keychain patch option. It will never be accepted.

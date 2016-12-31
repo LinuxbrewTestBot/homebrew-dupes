@@ -1,15 +1,14 @@
 class Lapack < Formula
   desc "Linear Algebra PACKage"
   homepage "http://www.netlib.org/lapack/"
-  url "http://www.netlib.org/lapack/lapack-3.6.1.tgz"
-  sha256 "888a50d787a9d828074db581c80b2d22bdb91435a673b1bf6cd6eb51aa50d1de"
+  url "http://www.netlib.org/lapack/lapack-3.7.0.tgz"
+  sha256 "ed967e4307e986474ab02eb810eed1d1adc73f5e1e3bc78fb009f6fe766db3be"
   head "https://github.com/Reference-LAPACK/lapack.git"
 
   bottle do
-    sha256 "c4d56d7d4b5288d7629392239dea020e918fa3fdaf286cf046116d3afda2d6e1" => :el_capitan
-    sha256 "135069ff3f5ec2ca7ce0dc6d430ec3b05a8df07c32758f0008af18a04e7963a7" => :yosemite
-    sha256 "46d218675c35154e8435189fd15eb164b6317bb823402f4f7adba5c8ebd5547a" => :mavericks
-    sha256 "2d42d34802ea15342cec556ffff211159bd8e82e91aedebd969de54b194881b5" => :x86_64_linux
+    sha256 "06af7eef33ca3c067c0d68f0913e5c4920d6106986356ef37db9cc39451d0f05" => :sierra
+    sha256 "6a83edd0736fc8d499b355870f328d36a722b05b04303bbf7a48260ef7e964cb" => :el_capitan
+    sha256 "5f7584fd063174c84e0bd2374d1d021e1efd64a28b2b03d3ddb8b4a6ad14c4e8" => :yosemite
   end
 
   keg_only :provided_by_osx
