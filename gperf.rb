@@ -1,16 +1,15 @@
 class Gperf < Formula
   desc "Perfect hash function generator"
   homepage "https://www.gnu.org/software/gperf"
-  url "https://ftpmirror.gnu.org/gperf/gperf-3.0.4.tar.gz"
-  mirror "https://ftp.gnu.org/pub/gnu/gperf/gperf-3.0.4.tar.gz"
-  sha256 "767112a204407e62dbc3106647cf839ed544f3cf5d0f0523aaa2508623aad63e"
+  url "https://ftpmirror.gnu.org/gperf/gperf-3.1.tar.gz"
+  mirror "https://ftp.gnu.org/gnu/gperf/gperf-3.1.tar.gz"
+  sha256 "588546b945bba4b70b6a3a616e80b4ab466e3f33024a352fc2198112cdbb3ae2"
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "7a29550946fb75b6ec7796c00563038727843edf975c5a1f001e9a2334ea2741" => :el_capitan
-    sha256 "b59111d8699e9e005fd8ba71f1c73082801c59618f69e3b6132ef17f4fc3d4d4" => :yosemite
-    sha256 "2c96a9dac35ab5cc085d778d0e1fa4899dd0ae2de3120f243a9513761c3eda02" => :mavericks
-    sha256 "e8fa479ab02b7452a63e7c7f666845e7caef48a83e38f31bc7f3938b55dafa9d" => :x86_64_linux
+    sha256 "1ecfe525a1faf4e0c24ac61a230b3d19bebcf5272c0d6375a88f18fba347357c" => :sierra
+    sha256 "4add2ee04e49c8f35d381bc45c4eeef00321b29da8e8c7d4b44f57a129ef6057" => :el_capitan
+    sha256 "21a4e668f9cab868567c47b0da06ba0b340a0d5b68dfd9c2f5d5fbcdd450672e" => :yosemite
   end
 
   keg_only :provided_until_xcode43

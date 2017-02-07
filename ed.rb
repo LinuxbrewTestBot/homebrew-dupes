@@ -1,23 +1,22 @@
 class Ed < Formula
   desc "Classic UNIX line editor"
   homepage "https://www.gnu.org/software/ed/ed.html"
-  url "https://ftpmirror.gnu.org/ed/ed-1.13.tar.lz"
-  mirror "https://ftp.gnu.org/gnu/ed/ed-1.13.tar.lz"
-  sha256 "cd66c54a53cd6ef35a217556e7b2b2fdd973ca2708f4fc41636b0bc06388c7d3"
+  url "https://ftpmirror.gnu.org/ed/ed-1.14.1.tar.lz"
+  mirror "https://ftp.gnu.org/gnu/ed/ed-1.14.1.tar.lz"
+  sha256 "ffb97eb8f2a2b5a71a9b97e3872adce953aa1b8958e04c5b7bf11d556f32552a"
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "b276749b82fc6469a4ca7172bf768b478e28d63ff56e6e4edc3447dddb6dc070" => :el_capitan
-    sha256 "917a393cb31564765f482d19090199b24a7f1120f14d5943a47672680457bd19" => :yosemite
-    sha256 "c61efe8a7243f76298205003952af63c4ec20593ff0d9c861dff2f947eaceb36" => :mavericks
-    sha256 "c8a700fe6f47da3368b060c06a2128e4819805a3fbcd8621d5a3bb0032db74d1" => :x86_64_linux
+    sha256 "69032b6b2162fb516472bb92505a7657b7645e6522ae8f251c7781402e82e104" => :sierra
+    sha256 "3f0619432ac895107f603e6bbd14e8cc81e7431c7ba0a157d6aaf78f808fa6f7" => :el_capitan
+    sha256 "3c2fcb97472eb5824e15cc993e318d20ce668adf5462686a466f5833ced8ae8f" => :yosemite
   end
 
   deprecated_option "default-names" => "with-default-names"
   option "with-default-names", "Don't prepend 'g' to the binaries"
 
   def install
-    ENV.j1
+    ENV.deparallelize
 
     args = ["--prefix=#{prefix}"]
     args << "--program-prefix=g" if build.without? "default-names"

@@ -3,9 +3,9 @@ class Screen < Formula
   homepage "https://www.gnu.org/software/screen"
 
   stable do
-    url "https://ftpmirror.gnu.org/screen/screen-4.4.0.tar.gz"
-    mirror "https://ftp.gnu.org/gnu/screen/screen-4.4.0.tar.gz"
-    sha256 "ef722a54759a3bf23aad272bbf33c414c1078cad6bcd982fada93c0d7917218b"
+    url "https://ftpmirror.gnu.org/screen/screen-4.5.0.tar.gz"
+    mirror "https://ftp.gnu.org/gnu/screen/screen-4.5.0.tar.gz"
+    sha256 "01c3a7c362185f35d6a95dff52d64337076496acd034d717de3c263500cfefb0"
 
     # This patch is to disable the error message
     # "/var/run/utmp: No such file or directory" on launch
@@ -16,10 +16,9 @@ class Screen < Formula
   end
 
   bottle do
-    sha256 "791f7efb94556fee2535bad543dd3ded0afc85b083fed0ce354c9cf859479cee" => :el_capitan
-    sha256 "34713de232c8da57b7af9c38eda55cc9f649dc7713ad3c92a58a7ea23b964af1" => :yosemite
-    sha256 "456f6a6a6743c4e0dc1af4793fbe4e8908ba966510f2edeaecf0e46023a5c7e5" => :mavericks
-    sha256 "caa06dd7f3d6bfaaf4a632c3d260f22ba52e6ecddd8eee2d90ef251b0854d377" => :x86_64_linux
+    sha256 "221b49f50c6ea3a983510e7e3e75ee28e3df6f4a6ca086d7ab666d1e975cb7fe" => :sierra
+    sha256 "d70fd6573ae653eb3e9a5592f99f14667d4d23b25dc8c49a4fcc0ece49e1f2d0" => :el_capitan
+    sha256 "776e618fc5f84aae85141821e451ead1d6bac37e8e61c4844bf0e903be41ef58" => :yosemite
   end
 
   head do
