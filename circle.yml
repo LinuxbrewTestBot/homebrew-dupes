@@ -31,3 +31,6 @@ test:
       brew install patchelf
         && brew tap linuxbrew/xorg
         && brew test-bot --tap=homebrew/dupes --keep-old --verbose
+notify:
+  webhooks:
+    - url: https://p4142ivuwk.execute-api.us-west-2.amazonaws.com/prod/LinuxbrewTestBot?keep-old=1
