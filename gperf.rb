@@ -10,6 +10,7 @@ class Gperf < Formula
     sha256 "1ecfe525a1faf4e0c24ac61a230b3d19bebcf5272c0d6375a88f18fba347357c" => :sierra
     sha256 "4add2ee04e49c8f35d381bc45c4eeef00321b29da8e8c7d4b44f57a129ef6057" => :el_capitan
     sha256 "21a4e668f9cab868567c47b0da06ba0b340a0d5b68dfd9c2f5d5fbcdd450672e" => :yosemite
+    sha256 "74a926f718dbd15095f560ff493f04e3ef642c358e26c362fb4386cf8f082249" => :x86_64_linux
   end
 
   keg_only :provided_until_xcode43
