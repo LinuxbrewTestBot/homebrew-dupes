@@ -11,6 +11,7 @@ class Less < Formula
     sha256 "5894668335c7ba7b3bce8d7e3db1fd899e05db8a251e9ac39d33dd0be94b6d88" => :sierra
     sha256 "b64e1e151c141f2d9bd67529e1c877542e337447c9aae4ab42409a38ee06e80d" => :el_capitan
     sha256 "1a3f2691a70564b5e4935d01fc6760a97a42b7a4cf372b6feb55f197925bf0d9" => :yosemite
+    sha256 "7da2c2dd1e52ffa35fea04fc11d4f403ce1c8e43370a79135327049fbb49d363" => :x86_64_linux
   end
 
   devel do
