@@ -5,7 +5,23 @@ sudo: required
 before_install:
   - sudo apt-get -qq update
   - sudo apt-get install -y libxml-parser-perl libxml-sax-perl
-  - sudo apt-get remove -y libncurses5-dev libtinfo-dev
+  - DEBIAN_FRONTEND=noninteractive sudo apt-get autoremove -y --purge
+      libblas-dev
+      libfreetype6-dev
+      libicu-dev
+      libidn11-dev
+      libjasper-dev
+      libjbig-dev
+      libkrb5-dev
+      liblzma-dev
+      libncurses5-dev
+      libpcre3-dev
+      libtinfo-dev
+      libwebp-dev
+      libwmf-dev
+      libxml2-dev
+      llvm-3.4
+      mysql-common
   # Fix error: Incorrect file permissions (664)
   - chmod 0644 *.rb
   - umask 022
@@ -17,7 +33,7 @@ before_install:
   - sudo mkdir $HOME
   - sudo chown "$USER:" $HOME
   - LINUXBREW=$HOME/.linuxbrew
-  - git clone https://github.com/Linuxbrew/brew.git $LINUXBREW
+  - git clone https://github.com/Linuxbrew/brew $LINUXBREW
   - export PATH="$LINUXBREW/bin:$LINUXBREW/sbin:$PATH"
   - REPO="$(brew --repo homebrew/dupes)"
   - rm -rf "$REPO"
@@ -27,6 +43,7 @@ before_install:
   - cd "$(brew --repo)"
   - export HOMEBREW_DEVELOPER=1
   - export HOMEBREW_NO_AUTO_UPDATE=1
+  - export HOMEBREW_VERBOSE=1 HOMEBREW_VERBOSE_USING_DOTS=1
   - ulimit -n 1024
   - brew tap linuxbrew/xorg
 
