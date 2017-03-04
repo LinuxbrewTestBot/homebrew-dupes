@@ -1,16 +1,15 @@
 class Whois < Formula
   desc "Lookup tool for domain names and other internet resources"
   homepage "https://packages.debian.org/sid/whois"
-  url "https://mirrors.kernel.org/debian/pool/main/w/whois/whois_5.2.14.tar.xz"
-  sha256 "a41daf41abed0fbfa8c9c4b0e4a3f5f22d9876dd6feb9091aac12f8f4c38b0d2"
+  url "https://mirrors.kernel.org/debian/pool/main/w/whois/whois_5.2.15.tar.xz"
+  sha256 "7a5a6b690bfc6360d92d9328adbe5c1f096a41f0d6548ce0df4aa664dcb37188"
   head "https://github.com/rfc1036/whois.git"
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "7cf97ab9df095c8ed72586053460554974163ef012209bad7ada9bd0c0e7307c" => :sierra
-    sha256 "8d1d245e1d9fbc29fafb24d946b79a7ec89cce8a9756a2bb58c4eb018c75dfbe" => :el_capitan
-    sha256 "3e4f73d1248423b856ec7f7130dc1136de8cfce198bd0743722e859b10e94e2a" => :yosemite
-    sha256 "487ecc7abc8bc3681b9494107d595e906eb9e65e1beb286818ee5ed96ea6f69c" => :x86_64_linux
+    sha256 "cd0248e4f6d4313750eafb776dd7685448b6f4c3436f0839dcc79040d15ba19a" => :sierra
+    sha256 "f5bde04e75e69f72b3d7b5b2383ff562a81bdb66d549fbabbbf55ac281904ee0" => :el_capitan
+    sha256 "0402bfeff02637945f2a00fbeb6401439730a23b26e6be0d9fc21d243f63520d" => :yosemite
   end
 
   def install
