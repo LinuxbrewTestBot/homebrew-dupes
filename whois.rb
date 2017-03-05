@@ -10,6 +10,7 @@ class Whois < Formula
     sha256 "cd0248e4f6d4313750eafb776dd7685448b6f4c3436f0839dcc79040d15ba19a" => :sierra
     sha256 "f5bde04e75e69f72b3d7b5b2383ff562a81bdb66d549fbabbbf55ac281904ee0" => :el_capitan
     sha256 "0402bfeff02637945f2a00fbeb6401439730a23b26e6be0d9fc21d243f63520d" => :yosemite
+    sha256 "c742895c3b4edceb9e748f20b729ea089c4b2558bea9b495ffe290d1c768460f" => :x86_64_linux
   end
 
   def install
