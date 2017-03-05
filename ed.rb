@@ -11,6 +11,7 @@ class Ed < Formula
     sha256 "405f2bad74df5b2b414b3dcea1ab59b449249de212bd806efde9feafa16d9fe9" => :sierra
     sha256 "7b76873e8861fbd506841e6bc86b84fd9880a3840d8d42bd2f97aa173602e53c" => :el_capitan
     sha256 "4e57f31ea84c073844cb75dc46bbaead3f46a84b238ad0d5f8240766fba1040e" => :yosemite
+    sha256 "5da79935ed8e0af499d6555d56ef5ad3131316ae9846902f10ea7f278e4de7a4" => :x86_64_linux
   end
 
   deprecated_option "default-names" => "with-default-names"
