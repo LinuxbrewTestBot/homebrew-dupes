@@ -67,6 +67,7 @@ class Ncurses < Formula
       lib.install_symlink "libncurses.dylib" => "libcurses.dylib"
     else
       lib.install_symlink "libncurses.so" => "libcurses.so"
+      lib.install_symlink "libncurses.so" => "libtermcap.so"
       lib.install_symlink "libncurses.so" => "libtinfo.so"
     end
 
