@@ -21,6 +21,7 @@ class Screen < Formula
     sha256 "469507b70e1576650d0ef3b555fa38eeeb7ce148b26f39935bae22b0b0751336" => :sierra
     sha256 "a86d97e7f911f237827627261d5ab89bab335126f56bfd4e08364326e0b363dd" => :el_capitan
     sha256 "afd149c84096771007871190af3b722bb082c2df5c9c6e36bbf4f26792cfec75" => :yosemite
+    sha256 "dbddac3db8e5d6befb8fd195fcc7d5b1e7120775db6158796afbe4100481195e" => :x86_64_linux
   end
 
   head do
