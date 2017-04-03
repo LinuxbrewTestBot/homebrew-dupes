@@ -1,3 +1,4 @@
+# Openssh: build a bottle for Linuxbrew
 class Openssh < Formula
   desc "OpenBSD freely-licensed SSH connectivity tools"
   homepage "https://www.openssh.com/"
