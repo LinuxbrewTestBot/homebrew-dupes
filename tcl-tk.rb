@@ -2,14 +2,15 @@ class TclTk < Formula
   desc "Tool Command Language"
   homepage "https://www.tcl.tk/"
   url "https://downloads.sourceforge.net/project/tcl/Tcl/8.6.6/tcl8.6.6-src.tar.gz"
+  mirror "ftp://ftp.tcl.tk/pub/tcl/tcl8_6/tcl8.6.6-src.tar.gz"
   version "8.6.6"
   sha256 "a265409781e4b3edcc4ef822533071b34c3dc6790b893963809b9fe221befe07"
+  revision 1
 
   bottle do
-    sha256 "0659e242f85d5c12ea1d787caeccb509b82a382f09715bd3c1cf07f80b90a954" => :el_capitan
-    sha256 "7b560a2d1e586cd3e680a82b825d4da7bd1901a116311ee12fedb5bd1b6b565f" => :yosemite
-    sha256 "f81641aa06110c08cf68516748a06239ce26c93a4bbaa36ee4baef181b3e82ea" => :mavericks
-    sha256 "c81d3fc3c9fbf8fec15c0d92d3271378a9afb5d211ba184c802cd0b15038e882" => :x86_64_linux
+    sha256 "4ab93b570b42e79fef6f154e4ffc1be7faf792eaedda3ea995edfe846670efac" => :sierra
+    sha256 "7749a9306ad76868443c254d2191d7809b89fd536d3c723095a60879bff01abd" => :el_capitan
+    sha256 "dde73a5b17f8dc6acfd974f88605a97e9b50ca12b1af9071825c67c69b33cf7c" => :yosemite
   end
 
   keg_only :provided_by_osx,
@@ -23,16 +24,18 @@ class TclTk < Formula
   option "with-x11", "Build X11-based Tk instead of Aqua-based Tk"
 
   depends_on :x11 => :optional
+  depends_on "pkg-config" => :build if build.with? "x11"
 
   resource "tk" do
     url "https://downloads.sourceforge.net/project/tcl/Tcl/8.6.6/tk8.6.6-src.tar.gz"
+    mirror "ftp://ftp.tcl.tk/pub/tcl/tcl8_6/tk8.6.6-src.tar.gz"
     version "8.6.6"
     sha256 "d62c371a71b4744ed830e3c21d27968c31dba74dd2c45f36b9b071e6d88eb19d"
   end
 
   resource "tcllib" do
-    url "https://github.com/tcltk/tcllib/archive/tcllib_1_18.tar.gz"
-    sha256 "6a87881f545afb69c1130f60984b5d35cc22f1593b0835b982871c188fde3de8"
+    url "https://downloads.sourceforge.net/project/tcllib/tcllib/1.18/tcllib-1.18.tar.gz"
+    sha256 "72667ecbbd41af740157ee346db77734d1245b41dffc13ac80ca678dd3ccb515"
   end
 
   # sqlite won't compile on Tiger due to missing function;

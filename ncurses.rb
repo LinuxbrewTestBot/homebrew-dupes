@@ -4,18 +4,25 @@ class Ncurses < Formula
   url "https://ftpmirror.gnu.org/ncurses/ncurses-6.0.tar.gz"
   mirror "https://ftp.gnu.org/gnu/ncurses/ncurses-6.0.tar.gz"
   sha256 "f551c24b30ce8bfb6e96d9f59b42fbea30fa3a6123384172f9e7284bcf647260"
-  revision 2
+  revision 3
 
   bottle do
-    sha256 "03544fbc2da911adbd75ef5c15e7de3fad5860734edb7163f612d8e8ee2d2435" => :el_capitan
-    sha256 "2ee55629127590c4e676649eb7e1bdc76f596fb69a632b0afde2e4f34ec14b1d" => :yosemite
-    sha256 "ebab4ef644c3ef62e6406a636baca078a3c09254671d7cd8ef48db05bd7b11d0" => :mavericks
-    sha256 "7f3f7e45179f8e086e0e246651cfa87a0292fe01cac85aa8956e8f384059f653" => :x86_64_linux
+    sha256 "0b9103ce95f809c4ac104679a0c44f54bc2374c517447da9eb55b85bcad7d675" => :sierra
+    sha256 "daf1454abfe7785a642cc614e1b671f1e95ea797d9d1d0daaa5e7cb3800e0b69" => :el_capitan
+    sha256 "a73f869e5dc82d43fa05cdb86200a8a7b7e04b4da1902e9cdf77c90a94d678ad" => :yosemite
   end
 
   keg_only :provided_by_osx
 
   depends_on "pkg-config" => :build
+
+  # stable rollup patch created by upstream see
+  # http://invisible-mirror.net/archives/ncurses/6.0/README
+  resource "ncurses-6.0-20160910-patch.sh" do
+    url "http://invisible-mirror.net/archives/ncurses/6.0/ncurses-6.0-20160910-patch.sh.bz2"
+    mirror "https://www.mirrorservice.org/sites/lynx.invisible-island.net/ncurses/6.0/ncurses-6.0-20160910-patch.sh.bz2"
+    sha256 "f570bcfe3852567f877ee6f16a616ffc7faa56d21549ad37f6649022f8662538"
+  end
 
   def install
     # Fix the build for GCC 5.1
@@ -26,6 +33,10 @@ class Ncurses < Formula
     ENV.append "CPPFLAGS", "-P"
 
     (lib/"pkgconfig").mkpath
+
+    # stage and apply patch
+    buildpath.install resource("ncurses-6.0-20160910-patch.sh")
+    system "sh", "ncurses-6.0-20160910-patch.sh"
 
     system "./configure", "--prefix=#{prefix}",
                           "--enable-pc-files",

@@ -16,20 +16,20 @@ class Screen < Formula
   end
 
   bottle do
-    sha256 "ace5e75417b4a81553b4f922fad64103a248654f046bebe723b12b5df2f7cc06" => :sierra
-    sha256 "bad02f58fea1157e4298f2e239c75ed335cc6102e2f2d047b2dea9f87455593d" => :el_capitan
-    sha256 "2737afb154df0db914c143de6d05ca64a838d1a4ea586e6359f3aa630d360217" => :yosemite
-    sha256 "3d3b19f15711cbc1e43b1c8736dd8f3a0d399f273768d24c1d53fa5bba56a1e1" => :x86_64_linux
+    rebuild 1
+    sha256 "469507b70e1576650d0ef3b555fa38eeeb7ce148b26f39935bae22b0b0751336" => :sierra
+    sha256 "a86d97e7f911f237827627261d5ab89bab335126f56bfd4e08364326e0b363dd" => :el_capitan
+    sha256 "afd149c84096771007871190af3b722bb082c2df5c9c6e36bbf4f26792cfec75" => :yosemite
   end
 
   head do
     url "git://git.savannah.gnu.org/screen.git"
 
-    # This patch is to disable the error message
-    # "/var/run/utmp: No such file or directory" on launch
+    # This patch avoid a bug that prevents detached sessions to reattach
+    # See http://lists.gnu.org/archive/html/screen-users/2016-10/msg00007.html
     patch do
-      url "https://gist.githubusercontent.com/yujinakayama/4608863/raw/75669072f227b82777df25f99ffd9657bd113847/gistfile1.diff"
-      sha256 "9c53320cbe3a24c8fb5d77cf701c47918b3fabe8d6f339a00cfdb59e11af0ad5"
+      url "https://gist.githubusercontent.com/sobrinho/5a7672e088868c2d036957dbe7825dd0/raw/c6fe5dc20cb7dbd0e23f9053aa3867fcbc01d983/diff.patch"
+      sha256 "47892633ccb137316a0532b034d0be81edc26fc72a6babca9761a1649bc67fd1"
     end
   end
 
@@ -51,10 +51,16 @@ class Screen < Formula
     ENV.append_to_cflags "-include utmp.h" unless OS.mac?
 
     system "./autogen.sh"
-    system "./configure", "--prefix=#{prefix}",
-                          "--mandir=#{man}",
-                          "--infodir=#{info}",
-                          "--enable-colors256"
+
+    args = %W[
+      --prefix=#{prefix}
+      --mandir=#{man}
+      --infodir=#{info}
+      --enable-colors256
+    ]
+    args << "--enable-pam" if OS.mac?
+    system "./configure", *args
+
     system "make"
     system "make", "install"
   end

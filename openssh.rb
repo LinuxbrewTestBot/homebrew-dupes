@@ -1,16 +1,16 @@
 class Openssh < Formula
   desc "OpenBSD freely-licensed SSH connectivity tools"
-  homepage "http://www.openssh.com/"
-  url "http://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-7.4p1.tar.gz"
-  mirror "https://www.mirrorservice.org/pub/OpenBSD/OpenSSH/portable/openssh-7.4p1.tar.gz"
-  version "7.4p1"
-  sha256 "1b1fc4a14e2024293181924ed24872e6f2e06293f3e8926a376b8aec481f19d1"
+  homepage "https://www.openssh.com/"
+
+  url "https://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-7.5p1.tar.gz"
+  mirror "https://www.mirrorservice.org/pub/OpenBSD/OpenSSH/portable/openssh-7.5p1.tar.gz"
+  version "7.5p1"
+  sha256 "9846e3c5fab9f0547400b4d2c017992f914222b3fd1f8eee6c7dc6bc5e59f9f0"
 
   bottle do
-    sha256 "dc1399c974bd93b13c2a7814cc3ee94a26b58336ec96d47e33bfd6913446793c" => :sierra
-    sha256 "eab9307dc45d0f2438492e582eb5d6d5c47a959e8c2ddd9999b23a366bd25907" => :el_capitan
-    sha256 "901f3961cd36001559e988c43fc46d17fdd8d358cfc876a5bddae96120dfaed8" => :yosemite
-    sha256 "3e84382667dad4b4d6b07c114bd60c08a3361d29e677f31bc621862e1af14d8b" => :x86_64_linux
+    sha256 "c942ff58039548faeb3f3d4c491e9e620a2fde28393755b231b1a547dfb5c1a1" => :sierra
+    sha256 "7ec1b04d0d82c4f32a06455646ef1df505b54266e7351d90bd4270829dc5805c" => :el_capitan
+    sha256 "8ba916a853ff38db1273332ddf334f3203e541ff2700908ca5b9804c9ce1c585" => :yosemite
   end
 
   # Please don't resubmit the keychain patch option. It will never be accepted.
@@ -18,7 +18,6 @@ class Openssh < Formula
   option "with-libressl", "Build with LibreSSL instead of OpenSSL"
 
   depends_on "openssl" => :recommended
-  depends_on "libressl" => :optional
   depends_on "ldns" => :optional
   depends_on "pkg-config" => :build if build.with? "ldns"
   unless OS.mac?
@@ -36,12 +35,6 @@ class Openssh < Formula
     patch do
       url "https://raw.githubusercontent.com/Homebrew/patches/d8b2d8c2/openssh/patch-sshd.c-apple-sandbox-named-external.diff"
       sha256 "3505c58bf1e584c8af92d916fe5f3f1899a6b15cc64a00ddece1dc0874b2f78f"
-    end
-
-    # Patch for SSH tunnelling issues caused by launchd changes on Yosemite
-    patch do
-      url "https://raw.githubusercontent.com/Homebrew/patches/d8b2d8c2/OpenSSH/launchd.patch"
-      sha256 "df61404042385f2491dd7389c83c3ae827bf3997b1640252b018f9230eab3db3"
     end
   end
 
